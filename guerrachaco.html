@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guerra del Chaco (1932-1935)</title>
+  <style>
+    :root{
+      --bg:#fffefc;
+      --card:#ffffff;
+      --accent:#6b2b0b;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fbf9f7,#fffefc);
+      font-family:Georgia,serif;
+      color:var(--text);
+      line-height:1.7;
+    }
+    header{
+      background:#6b3a22;
+      padding:1.5rem 1rem;
+      color:#fff;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      max-width:1050px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:1rem;
+    }
+    .header-title {
+      font-weight:700;
+      font-size:clamp(1.2rem, 4vw, 1.8rem);
+    }
+    .btn-back {
+      background:rgba(255,255,255,0.15);
+      color:#fff;
+      padding:0.5rem 1rem;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:background 0.3s;
+      font-size:clamp(0.85rem, 2vw, 1rem);
+    }
+    .btn-back:hover {
+      background:rgba(255,255,255,0.25);
+    }
+    .wrap{
+      max-width:1050px;
+      margin:2rem auto;
+      padding:0 1rem;
+    }
+    .card{
+      background:var(--card);
+      padding:clamp(1rem, 3vw, 2rem);
+      border-radius:12px;
+      box-shadow:0 6px 24px rgba(17,24,39,0.08);
+      margin-bottom:2rem;
+    }
+    .hero-img {
+      width:100%;
+      max-width:600px;
+      height:auto;
+      border-radius:12px;
+      margin:0 auto 1.5rem;
+      display:block;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .content-img {
+      width:100%;
+      max-width:500px;
+      height:auto;
+      border-radius:10px;
+      margin:1.5rem auto;
+      display:block;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color:var(--accent);
+      font-size:clamp(1.5rem, 5vw, 2.2rem);
+      margin-bottom:1rem;
+      text-align:center;
+    }
+    h2 {
+      color:var(--accent);
+      font-size:clamp(1.2rem, 4vw, 1.6rem);
+      margin:2rem 0 1rem;
+      border-bottom:2px solid var(--border);
+      padding-bottom:0.5rem;
+    }
+    pre{
+      white-space:pre-wrap;
+      font-family:Georgia,serif;
+      line-height:1.7;
+      margin:1rem 0;
+      font-size:clamp(0.95rem, 2vw, 1.05rem);
+      text-align:justify;
+    }
+    .video-section {
+      background:linear-gradient(135deg, #fff8f0 0%, #ffe8d6 100%);
+      padding:clamp(2rem, 4vw, 3rem);
+      border-radius:16px;
+      margin-top:3rem;
+      border:2px solid #f4d4b8;
+    }
+    .video-section h2 {
+      text-align:center;
+      color:#6b3a22;
+      border:none;
+      margin-bottom:0.8rem;
+      font-size:clamp(1.3rem, 4vw, 1.8rem);
+    }
+    .video-section > p {
+      text-align:center;
+      margin-bottom:2rem;
+      color:#8b6545;
+      font-style:italic;
+    }
+    .video-links {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:1.5rem;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .video-link {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:0.8rem;
+      background:#fff;
+      padding:1.8rem 1.5rem;
+      border-radius:12px;
+      text-decoration:none;
+      color:var(--text);
+      box-shadow:0 4px 15px rgba(107,58,34,0.15);
+      transition:all 0.3s ease;
+      border:2px solid transparent;
+      text-align:center;
+    }
+    .video-link:hover {
+      transform:translateY(-8px);
+      box-shadow:0 8px 25px rgba(107,58,34,0.25);
+      border-color:#6b3a22;
+      background:linear-gradient(135deg, #fff 0%, #fff8f0 100%);
+    }
+    .video-icon {
+      font-size:3rem;
+      background:linear-gradient(135deg, #6b3a22 0%, #8b5a3c 100%);
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      box-shadow:0 4px 12px rgba(107,58,34,0.3);
+      transition:transform 0.3s ease;
+    }
+    .video-link:hover .video-icon {
+      transform:scale(1.1) rotate(5deg);
+    }
+    .video-text {
+      font-weight:600;
+      font-size:clamp(1rem, 2.2vw, 1.15rem);
+      line-height:1.4;
+      color:#4a2f1a;
+    }
+    @media (max-width: 768px) {
+      .video-links {
+        grid-template-columns:1fr;
+      }
+    }
+    footer{
+      margin-top:2rem;
+      padding:1.5rem;
+      background:var(--accent);
+      color:#fff;
+      text-align:center;
+      font-size:clamp(0.85rem, 2vw, 0.95rem);
+      border-radius:12px 12px 0 0;
+    }
+    @media (max-width: 768px) {
+      .header-content {
+        justify-content:center;
+        text-align:center;
+      }
+      .video-grid {
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="header-title">Guerra del Chaco (1932-1935)</div>
+       <a href="index.html#acontecimientos" class="btn-back">← Volver a Acontecimientos</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card">
+      <h1>La Guerra del Chaco</h1>
+      <img src="imagenes/12.jpg" class="hero-img" alt="Guerra del Chaco">
+
+      <pre>La Guerra del Chaco (1932-1935) fue el mayor conflicto bélico de Sudamérica del siglo XX, y tuvo consecuencias negativas para el Paraguay y para Bolivia.
+
+Los antecedentes del conflicto deben buscarse en la colonización española de América. Al producirse la independencia, las nuevas naciones americanas se consideraron herederas de las divisiones territoriales coloniales, que eran confusas. El Virreinato del Río de la Plata abarcaba aproximadamente el territorio de las actuales repúblicas del Paraguay, Uruguay, Argentina y Bolivia. Exceptuando el Uruguay, que estaba muy alejado del Chaco, los otros tres países reclamaron el territorio del Chaco, apoyándose en las leyes españolas. La ciudad de Charcas (hoy Sucre, Bolivia) tenía jurisdicción sobre una parte del Chaco. Según las leyes españolas, las ciudades (p. e., Asunción) tenían jurisdicción en un área de cien millas a la redonda; de hecho, Asunción exploró y fundó algunos asentamientos en el Chaco, como Fuerte Borbón (hoy Olimpo). Pero Buenos Aires había sido la capital del Virreinato del Río de la Plata, y como tal había ejercido alguna forma de gobierno en el Chaco. Dependiendo de la interpretación, las leyes coloniales apoyaban las reclamaciones del Paraguay, la Argentina y Bolivia.
+
+El tratado de la Triple Alianza (firmado el 1 de mayo de 1865) concedió a la Argentina el Chaco hasta Bahía Negra. Pero en 1876, con el tratado Machaín-Irigoyen, la Argentina reconoció como paraguayo el territorio situado al norte del Pilcomayo, exceptuando la zona de Villa Hayes. El arbitraje del presidente norteamericano Rutheford Hayes adjudicó al Paraguay la zona de Villa Hayes. A partir de entonces, la discusión sería entre el Paraguay y Bolivia, que no pudieron ponerse de acuerdo sobre los límites durante el siglo XIX, a pesar de que firmaron tres tratados, al final rechazados.
+
+Para 1930, el Paraguay había poblado la región chaqueña del sureste y del centro, mientras que Bolivia había poblado la del noroeste. La solución razonable hubiera sido negociar los límites de la zona en que no existía una ocupación efectiva de ninguno de los dos países. No lo permitieron las circunstancias: ningún Gobierno podía hacer concesiones al del otro país sin pagar un alto costo político. Por eso, el Gobierno boliviano llevaba sus reclamaciones hasta la región de Villa Hayes; el paraguayo, hasta la del Parapití.</pre>
+
+      <img src="imagenes/guerrachaco.jpg" class="content-img" alt="Mapa Guerra del Chaco">
+
+      <h2>El Desarrollo del Conflicto</h2>
+      <pre>Las grandes ofensivas comenzaron en 1932, después de varios años incidentes y de paz armada, que exigieron enormes gastos militares. Durante las presidencias de Eligio Ayala (1924-28), José P. Guggiari (1928-32) y Eusebio Ayala (1932-36), el Paraguay llegó a gastar el 50% de su presupuesto en defensa. Las soluciones negociadas resultaron imposibles, y la guerra estuvo a un paso de comenzar en 1929. En diciembre de aquel año, un destacamento paraguayo ocupó Fortín Vanguardia, puesto boliviano de la zona de Bahía Negra. Bolivia respondió ocupando Boquerón, se rompieron las relaciones, y la intervención de chile impidió el inicio de una guerra abierta. Otros países americanos formaron la Comisión de Neutrales, que se reunió en Washington y consiguió apaciguar a las dos naciones por cierto tiempo. A la larga, la Comisión de Neutrales no pudo evitar ni detener el enfrentamiento armado.
+
+La ruptura definitiva se produjo en junio de 1932, cuando un destacamento boliviano ocupó el fuerte paraguayo Carlos Antonio López, a orillas de la laguna Pitiantuta. Tropas paraguayas retomaron el fuerte; los bolivianos respondieron ocupando los fuertes paraguayos de Boquerón, Corrales y Toledo. En agosto de 1932, la Liga de Neutrales hizo un inútil llamado a la paz. En el mismo mes, ocupó la presidencia del Paraguay Eusebio Ayala, quien entregó la comandancia de las tropas del Chaco al entonces teniente coronel José Félix Estigarribia. Daniel Salamanca era presidente de Bolivia. El comandante de las fuerzas bolivianas era el general alemán Hans Kundt. Kundt había ganado experiencia en la Primera Guerra Mundial, pero trató de aplicar en el Chaco, en forma demasiado estricta, las tácticas de aquella contienda. Estigarribia, por lo contrario, optó por una guerra de movimientos: retrocedía en caso de necesidad y tomaba en cuenta las características del terreno; en especial, la disponibilidad de agua, un serio problema en el Chaco. A causa del agua, las acciones militares se desarrollaron principalmente en una franja de terreno relativamente cercana al río Pilcomayo, situada en los actuales departamentos de Villa Hayes y Boquerón.
+
+Estigarribia inició las operaciones en gran escala en septiembre de 1932 con la ofensiva que capturó Boquerón y luego otras posiciones del adversario (Toledo, Corrales, Arce).</pre>
+
+      <img src="imagenes/boquern.jpg" class="content-img" alt="Batalla de Boquerón">
+
+      <h2>Consecuencias del Conflicto</h2>
+      <pre>Pero varios factores lo obligaron a detener la ofensiva en diciembre de aquel año. Desde entonces, hasta septiembre de 1933, el ejército paraguayo se mantuvo en una posición defensiva. El boliviano emprendió una fuerte ofensiva, en que el general Kundt optó por los grandes ataques frontales, característicos de Primera Guerra Mundial. Esos ataques provocaron muertes innecesarias en Europa y en el Chaco. Las posiciones paraguayas de Nanawa, Toledo y Gondra resistieron la ofensiva, muy costosa en pérdidas materiales y humanas al enemigo. El fracaso de la ofensiva llevó a la destitución de Kundt, reemplazado por Enrique Peñaranda en el mando superior.
+
+Mientras se desarrollaban los combates, continuaban las negociaciones de paz sin mayor resultado. El 10 de mayo de 1933, el Paraguay declaró oficialmente la guerra a Bolivia. Esa declaración se efectuó impedir que el ejército boliviano se aprovisionase en la Argentina, algo posible desde el punto del derecho internacional mientras no existiese una declaración oficial de guerra. Pero aquella declaración tuvo una consecuencia negativa para el Paraguay. Bolivia presentó el caso a la Liga de Naciones (una institución que precedió a las Naciones Unidas). La Liga terminó por declarar país agresor al Paraguay. A causa de eso, al Paraguay se le prohibió comprar armas en el mercado internacional, mientras que Bolivia podía hacerlo libremente. Aquella prohibición o embargo no tuvo mayores consecuencias, porque el Paraguay se armó con el apoyo de la Argentina, que además de armas y municiones le suministró combustible y harina. La Argentina, por entonces, quería formar un frente con el Uruguay y el Paraguay para contrarrestar la influencia brasilera en el Río de la Plata. El Brasil, por intermedio de Bolivia, quería acercarse al Río de la Plata.
+
+Las operaciones prosiguieron. En septiembre de 1933, el ejército paraguayo emprendió la ofensiva y tomó Pampa Grande y Pozo Favorito. En octubre comenzó la maniobra conocida con el nombre de Campo Vía, terminada con grandes pérdidas bolivianas. En diciembre, por un corto tiempo, hubo un cese del fuego que no permitió ningún acuerdo de paz. Y así, durante el año 1934, se libraron los mayores combates de la contienda. La victoria paraguaya de El Carmen provocó un cambio de Gobierno en Bolivia: Daniel Salamanca fue reemplazado por José Luis Tejada. El ejército paraguayo siguió su avance y llegó hasta la ciudad boliviana de Villamontes, el centro de aprovisionamiento boliviano, que no pudo tomar. Luego cruzó el río Parapití, pero no pudo sostenerse en una posición tan alejada de sus bases y además poblada por los bolivianos, que también contaban con mayores recursos bélicos. La paz llegó finalmente con el protocolo del 12 de junio de 1935, para alivio de los dos países. La cuestión de límites, después de largas negociaciones, se fijó con el tratado del 21 de julio de 1938.
+
+Desde el punto de vista militar, la Guerra del Chaco terminó con una victoria paraguaya, por oposición a la Guerra de la Triple Alianza, terminada en la derrota y la destrucción. Haciendo de lado el resultado militar, la diferencia entre ambas se puede reducir a lo siguiente: la del Chaco fue una guerra más técnica, en que los combatientes contaban con cuadros de oficiales, y se libró en un territorio menos poblado y con menos daño para la población civil. Con todo, en el Chaco murieron cerca de 30.000 paraguayos, y un número mayor de bolivianos. A causa de la Guerra del Chaco, el ejército se convirtió en la fuerza dominante de la política paraguaya, una posición que ocupó hasta después de la caída de Alfredo Stroessner. También Bolivia se vio negativamente afectada por la guerra, que provocó una inestabilidad política a menudo sangrienta. Desde el punto de vista económico y social, aquella contienda fue un obstáculo para el progreso. Por eso al recordarla, aun respetando el valor de los combatientes, deben tenerse en cuenta las palabras de Eusebio Ayala: es lamentable que dos naciones pobres empleen sus limitados recursos en destruirse.</pre>
+
+      <div class="video-section">
+        <h2> Si no entendiste bien puedes ver los siguientes videos</h2>
+        <p style="color:#666;text-align:center;margin-bottom:1.5rem;">Haz clic en los enlaces para ver los videos en YouTube</p>
+        <div class="video-links">
+          <a href="https://www.youtube.com/watch?v=XMw5RJLYpuo" target="_blank" class="video-link">
+            <span class="video-icon">▶️</span>
+            <span class="video-text">La Guerra del Chaco</span>
+          </a>
+          
+          <a href="https://www.youtube.com/watch?v=Z_txEiDddAo&t=153s" target="_blank" class="video-link">
+            <span class="video-icon">▶️</span>
+            <span class="video-text">Batalla de Boquerón - Documental</span>
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        Por Guido Rodríguez Alcalá | 28-05-2011
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

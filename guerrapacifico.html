@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guerra del Pacífico (1879-1884)</title>
+  <style>
+    :root{
+      --bg:#071022;
+      --card:#0c1a2b;
+      --accent:#b3472e;
+      --text:#e6eef8;
+      --muted:#9fb6d8;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071022,#0a1530);
+      font-family:Inter,system-ui,Arial;
+      color:var(--text);
+      line-height:1.7;
+    }
+    header{
+      background:linear-gradient(90deg,#0b2a45,#0d3b5a);
+      padding:1.5rem 1rem;
+      color:#fff;
+      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
+    .header-content {
+      max-width:1050px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:1rem;
+    }
+    .header-title {
+      font-weight:700;
+      font-size:clamp(1.2rem, 4vw, 1.8rem);
+    }
+    .btn-back {
+      background:rgba(255,255,255,0.15);
+      color:#fff;
+      padding:0.5rem 1rem;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:background 0.3s;
+      font-size:clamp(0.85rem, 2vw, 1rem);
+    }
+    .btn-back:hover {
+      background:rgba(255,255,255,0.25);
+    }
+    .wrap{
+      max-width:1050px;
+      margin:2rem auto;
+      padding:0 1rem;
+    }
+    .card{
+      background:var(--card);
+      padding:clamp(1rem, 3vw, 2rem);
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      margin-bottom:2rem;
+    }
+    .hero-img {
+      width:100%;
+      max-width:600px;
+      height:auto;
+      border-radius:12px;
+      margin:0 auto 1.5rem;
+      display:block;
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
+    .content-img {
+      width:100%;
+      max-width:500px;
+      height:auto;
+      border-radius:10px;
+      margin:1.5rem auto;
+      display:block;
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color:#ff9966;
+      font-size:clamp(1.5rem, 5vw, 2.2rem);
+      margin-bottom:1rem;
+      text-align:center;
+    }
+    h2 {
+      color:#ff9966;
+      font-size:clamp(1.2rem, 4vw, 1.6rem);
+      margin:2rem 0 1rem;
+      border-bottom:2px solid rgba(255,255,255,0.1);
+      padding-bottom:0.5rem;
+    }
+    pre{
+      white-space:pre-wrap;
+      font-family:Inter,system-ui,Arial;
+      line-height:1.7;
+      margin:1rem 0;
+      font-size:clamp(0.95rem, 2vw, 1.05rem);
+      text-align:justify;
+      color:var(--text);
+    }
+    .video-section {
+      background:linear-gradient(135deg, #0d2540 0%, #0a1f38 100%);
+      padding:clamp(1.5rem, 4vw, 3rem);
+      border-radius:12px;
+      margin-top:3rem;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+    .video-section h2 {
+      text-align:center;
+      color:#ff9966;
+      border:none;
+      margin-bottom:1rem;
+    }
+    .video-links {
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+      max-width:700px;
+      margin:0 auto;
+    }
+    .video-link {
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      background:rgba(255,255,255,0.05);
+      padding:1.2rem 1.5rem;
+      border-radius:10px;
+      text-decoration:none;
+      color:#e6eef8;
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+      transition:transform 0.3s, box-shadow 0.3s, background 0.3s;
+      border-left:4px solid #ff9966;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+    .video-link:hover {
+      transform:translateX(5px);
+      box-shadow:0 6px 20px rgba(0,0,0,0.5);
+      background:rgba(255,255,255,0.08);
+    }
+    .video-icon {
+      font-size:1.5rem;
+      flex-shrink:0;
+    }
+    .video-text {
+      font-weight:600;
+      font-size:clamp(0.95rem, 2vw, 1.1rem);
+    }
+    footer{
+      margin-top:2rem;
+      padding:1.5rem;
+      background:linear-gradient(90deg,#0b2a45,#0d3b5a);
+      color:var(--muted);
+      text-align:center;
+      font-size:clamp(0.85rem, 2vw, 0.95rem);
+      border-radius:12px 12px 0 0;
+    }
+    @media (max-width: 768px) {
+      .header-content {
+        justify-content:center;
+        text-align:center;
+      }
+      .video-grid {
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="header-title">Guerra del Pacífico (1879-1884)</div>
+       <a href="index.html#acontecimientos" class="btn-back">← Volver a Acontecimientos</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card">
+      <h1>La Guerra del Pacífico</h1>
+      <img src="imagenes/pacifico.jpg" class="hero-img" alt="Guerra del Pacífico">
+
+      <pre>El 14 de febrero de 1879, la armada chilena desembarcó en el puerto de Antofagasta, entonces en territorio de Bolivia. Comenzaba de esa forma la guerra del Pacífico, un conflicto que involucraría a Chile, Bolivia y Perú, y que tendría como última consecuencia para Bolivia la pérdida de su única salida al mar, la provincia del Litoral, desde entonces en manos chilenas. El detonante del conflicto fue la explotación de los depósitos de salitre, una materia prima que adquirió tal importancia económica a finales del siglo XIX que se la llamaba el «oro blanco». 
+
+El salitre o nitrato de Chile es un nitrato sódico natural que se obtiene mediante el refinado del caliche, un tipo de sal que se encuentra bajo determinadas superficies desérticas, y cuyos mayores (y casi únicos) yacimientos se concentraban en la región fronteriza entre Chile, Bolivia y Perú. La utilidad del salitre como fertilizante y para la fabricación de explosivos provocó una fuerte demanda que lo convirtió en uno de los productos más codiciados por el comercio y la industria internacionales. La disputa por el salitre se añadía al conflicto que enfrentaba a los tres países por el comercio de otro apreciado fertilizante exclusivo de la misma región, el guano, procedente de los excrementos de animales de la zona.
+
+La actividad salitrera, circunscrita durante largo tiempo a la provincia peruana de Tarapacá, recibió un impulso significativo gracias a José Santos Ossa. En la década de 1860, este empresario minero chileno descubrió importantes depósitos de salitre en la región de Atacama, entre los que destacaba el Salar del Carmen, ampliando la explotación del mineral a la provincia boliviana del Litoral. Junto a otros socios chilenos, y gracias al capital de los comerciantes ingleses instalados en Valparaíso, Ossa fundó la compañía Melbourne Clark y Cía y obtuvo una concesión del gobierno boliviano para desarrollar la explotación por quince años. Sobre el campamento provisional de la compañía minera se levantaría la futura ciudad de Antofagasta, constituida como municipio en 1872. Dos años después, Chile y Bolivia firmaban el tratado de límites, un acuerdo que definía su frontera común y ponía fin a un contencioso territorial iniciado en 1840 y centrado en los derechos de explotación de ambos países sobre los depósitos de guano de la zona. Al mismo tiempo se establecía la exención del pago de nuevos impuestos por parte de la Melbourne Clark al gobierno boliviano durante veinte años.</pre>
+
+      <img src="imagenes/mapacifico.png" class="content-img" alt="Mapa Guerra del Pacífico">
+
+      <h2>Chilenos en Antofagasta</h2>
+      <pre>Pese a la firma del tratado, Chile continuaría en los años siguientes con su política expansionista, alentando la búsqueda de nuevos yacimientos fuera de sus fronteras. La paz inicial que siguió al tratado no duraría mucho tiempo. La Melbourne Clark había terminado la construcción del ferrocarril que unía la costa con el Salar del Carmen. Los yacimientos de salitre en Bolivia controlados por los chilenos se extendían ya por todo el litoral próximo a Antofagasta.
+
+La compañía, ya sin la participación de José Santos Ossa, se transformaría en la Compañía de Salitres y Ferrocarril de Antofagasta; sus máximos accionistas eran el empresario chileno Agustín Edwards y la empresa británica Gibbs & Cía, que hasta el momento había cimentado su actividad en la explotación guanera. El tratado de 1874 había frenado por el momento la amenaza a la soberanía de Bolivia sobre su territorio, pero cuando al auge de la industria salitrera se unió el descubrimiento de minas de plata en su costa, el número de trabajadores chilenos atraídos hasta la provincia del Litoral aumentó de forma considerable. A finales de los años setenta, la población de Antofagasta estaba constituida ya por un 93 por ciento de chilenos frente a sólo un dos por ciento de bolivianos. De esta forma, el Departamento del Litoral sólo conservaba de su bolivianidad la situación jurídica y un pequeño destacamento de soldados.
+
+En 1878, la Asamblea Nacional de Bolivia, ante el auge de las empresas salitreras anglo-chilenas y el escaso beneficio que los bolivianos sacaban de la explotación, decidió gravar con diez centavos las exportaciones de cada cien kilos de salitre de la Compañía. La empresa denunció ante el Congreso de Chile esa agresión a sus intereses, afirmando que violaba el tratado territorial entre ambos países. No sólo eso: el administrador general de la Compañía, el inglés George Hicks, llegó a sugerir que se presentaba una magnífica oportunidad para Chile de liberar al Pacífico «de aquella plaga de bolivianos». Cabe señalar que las conexiones entre la empresa salitrera y el gobierno chileno eran notorias: José Francisco Vergara, ministro del Interior, o Rafael Sotomayor, ministro de Guerra, así como diversos congresistas, formaban parte de su accionariado.</pre>
+
+      <img src="imagenes/comb.jpg" class="content-img" alt="Combate Naval">
+
+      <h2>Hacia la Guerra</h2>
+      <pre>Finalmente, con el apoyo del gobierno chileno, la Compañía de Salitres de Antofagasta se negó a pagar el impuesto exigido por el Estado boliviano, alegando que se trataba de una violación de los acuerdos existentes. El gobierno boliviano respondió ordenando el embargo y la subasta de sus bienes. A su vez, Perú también había decretado expropiaciones de empresas chilenas relacionadas con el guano y el salitre. Después de que fracasaran los intentos de resolver el conflicto mediante un arbitraje, los tres países se encaminaron irremediablemente a la guerra.
+
+El 14 de febrero de 1879, fecha planeada para la expropiación y subasta pública de los bienes de la Compañía de Salitres, el ejército chileno ocupó la ciudad de Antofagasta antes de que la puja pudiese llevarse a cabo. En los años anteriores, Chile se había convertido en una potencia naval gracias al apoyo de Gran Bretaña, que había financiado y construido gran parte de su armada. Por ello, apenas dos meses después del estallido de la guerra los chilenos se habían apoderado de todo el litoral de Antofagasta. El conflicto duraría aún cuatro años más, en los que se sucedieron las escaramuzas, ocupaciones y fluctuaciones características de toda guerra. Pero un hecho permanecería inmutable: Bolivia perdió para siempre su salida al mar.</pre>
+
+      <h2>Bolivia se queda sin costa</h2>
+      <pre>La guerra se clausuró de forma oficial con la tregua firmada por Chile y Bolivia el 4 de abril de 1884. Veinte años después, el tratado de La Paz y la Amistad reconoció a Chile la cesión a perpetuidad del litoral boliviano, y en compensación se daba a Bolivia el derecho de libre tránsito de sus bienes y mercancías por los puertos chilenos.
+
+Sin embargo, pronto se hizo patente la disconformidad boliviana con el acuerdo, y desde 1910 sus sucesivos gobiernos no han cesado de reclamar el derecho a una salida al Pacífico. En 2018, el Tribunal Internacional de Justicia de La Haya, máximo órgano jurisdiccional de las Naciones Unidas, dictaminó que Chile «no está jurídicamente obligado a facilitar el acceso» de Bolivia al mar, pero el Estado boliviano afirmó enseguida que nunca renunciaría a ese derecho.</pre>
+
+      <div class="video-section">
+        <h2>Si no entendiste bien puedes ver los siguientes videos</h2>
+        <p style="color:#9fb6d8;text-align:center;margin-bottom:1.5rem;">Haz clic en los enlaces para ver los videos en YouTube</p>
+        <div class="video-links">
+          <a href="https://www.youtube.com/watch?v=baGieJNeZqw&t=134s" target="_blank" class="video-link">
+            <span class="video-icon">▶️</span>
+            <span class="video-text">Guerra del Pacífico Resumen</span>
+          </a>
+      
+          <a href="https://www.youtube.com/watch?v=Fa2ij2oBsYo" target="_blank" class="video-link">
+            <span class="video-icon">▶️</span>
+            <span class="video-text">Defenza de Calama</span>
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        Historia National Geographic
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
